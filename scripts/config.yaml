@@ -1,4 +1,9 @@
 synapse:
+  grs: 
+    id: syn24184523
+    name: Global_Response_Set
+    type: file
+    description: REDCap mapping between coded and uncoded values to supplement data dictionaries
   dataset:
     id: syn22296821
     name: Data files for derived variables
@@ -19,6 +24,18 @@ synapse:
     name: Release Information
     type: table
     description: BPC release information by cohort and release
+  data_dict_folder:
+    NTRK: syn26126363
+upload:
+  NTRK:
+    CHOP: syn35489374
+    UCSF: syn45599700
+    VICC: syn47102556
+    PROV: syn45556938
+label_folder:
+  NTRK: syn48375918
+release_folder:
+  NTRK: syn48376328
 check:
   1: 
     function: check_code_name_empty
@@ -61,4 +78,35 @@ check:
     implemented: 1
     deprecated: 1
     description: Code does not exist in data element catalog.
-    request: Please notify Sage that this variable needs to be added to the catalog. 
+    request: Please notify Sage that this variable needs to be added to the catalog.
+column_name:
+  variable_name: "Variable / Field Name"
+  form_name: "Form Name"
+  field_type: "Field Type"
+  variable_mapping: "Choices, Calculations, OR Slider Labels"
+  variable_type: "Text Validation Type OR Show Slider Number"
+  variable_min: "Text Validation Min"
+  variable_max: "Text Validation Max"
+  rs_label: "Response Set Label"
+  rs_value: "Response Set Values"
+mapping:
+  complete:
+    0: "Not Started"
+    1: "Data Entry Started"
+    2: "Completed"
+    5: "Monitoring Complete"
+    6: "Form Removed"
+    7: "Form Locked"
+    8: "Form Signed"
+  yesno_rca:
+    0: "No"
+    1: "Yes"
+  instrument:
+    ca_directed_drugs: "Ca Directed Drugs"
+    cancer_diagnosis: "Cancer Diagnosis"
+    cancer_panel_test: "Cancer Panel Test"
+    prissmm_imaging: "Prissmm Imaging"
+    prissmm_med_onc_assessment: "Prissmm Med Onc Assessment"
+    prissmm_pathology: "Prissmm Pathology"
+    prissmm_tumor_marker: "Prissmm Tumor Marker"
+    ca_directed_radtx: "Ca Directed Radtx"
